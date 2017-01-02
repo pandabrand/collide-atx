@@ -1,0 +1,19 @@
+{
+  "name": "pandabrand/collide-atx",
+  "description": "Plugin for COLLiDe ATX website",
+  "keywords": ["wordpress", "plugin", "pandabrand", "collide", "atx"],
+  "homepage": "https://pandabrand.net",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Frederick Wells",
+      "email": "pandabrand@pandabrand.net",
+      "homepage": "https://pandabrand.net"
+    }
+  ],
+  "type": "wordpress-plugin",
+  "require": {
+    "php": ">=5.3.2",
+    "composer/installers": "v1.2.0"
+  }
+}
