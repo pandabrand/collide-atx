@@ -25,7 +25,18 @@ function collide_atx_cpt() {
       'name' => 'Artists',
       'singular_name' => 'Artist',
      ),
-    'description' => 'Chefs that will be cooking at COLLiDe ATX.',
+    'description' => 'Artists that will be showing work at COLLiDe ATX.',
+    'public' => true,
+    'menu_position' => 20,
+    'supports' => array( 'title', 'editor', 'custom-fields' )
+  ));
+
+  register_post_type( 'event', array(
+    'labels' => array(
+      'name' => 'Events',
+      'singular_name' => 'Event',
+     ),
+    'description' => 'Events that will be happening at COLLiDe ATX.',
     'public' => true,
     'menu_position' => 20,
     'supports' => array( 'title', 'editor', 'custom-fields' )
