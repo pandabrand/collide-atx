@@ -2,8 +2,8 @@
   "name": "pandabrand/collide-atx",
   "version": "master",
   "source": {
-    "url": "https://github.com/pandabrand/collide-atx.git",
-    "type": "git"
+    "type": "git",
+    "url": "https://github.com/pandabrand/collide-atx.git"
   },
   "description": "Plugin for COLLiDe ATX website",
   "keywords": ["wordpress", "plugin", "pandabrand", "collide", "atx"],
