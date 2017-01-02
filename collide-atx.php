@@ -22,7 +22,7 @@ function collide_atx_cpt() {
       'view_item' => 'View Chef',
       'search_items' => 'Search Chefs',
       'not_found' => 'No Chefs in the kitchen',
-      'not_found_in_trash' => 'No Chefs by the dumpster(trash).'
+      'not_found_in_trash' => 'No Chefs by the dumpster(trash).',
       'all_items' => 'Chefs',
      ),
     'description' => 'Chefs that will be cooking at COLLiDe ATX.',
@@ -44,7 +44,7 @@ function collide_atx_cpt() {
       'view_item' => 'View Artist',
       'search_items' => 'Search Artists',
       'not_found' => 'No Artists in the studio',
-      'not_found_in_trash' => 'No Artists by the dumpster(trash).'
+      'not_found_in_trash' => 'No Artists by the dumpster(trash).',
       'all_items' => 'Artists',
      ),
     'description' => 'Artists that will be showing work at COLLiDe ATX.',
@@ -66,7 +66,7 @@ function collide_atx_cpt() {
       'view_item' => 'View Event',
       'search_items' => 'Search Events',
       'not_found' => 'No Events',
-      'not_found_in_trash' => 'No Events in the trash.'
+      'not_found_in_trash' => 'No Events in the trash.',
       'all_items' => 'Events',
      ),
     'description' => 'Events that will be happening at COLLiDe ATX.',
