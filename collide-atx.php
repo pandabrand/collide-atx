@@ -28,7 +28,8 @@ function collide_atx_cpt() {
     'description' => 'Chefs that will be cooking at COLLiDe ATX.',
     'public' => true,
     'menu_position' => 20,
-    'supports' => array( 'title', 'editor', 'custom-fields' )
+    'supports' => array( 'title', 'editor', 'custom-fields' ),
+    'has_archive' => true
   ));
 
   register_post_type( 'artist', array(
@@ -50,7 +51,8 @@ function collide_atx_cpt() {
     'description' => 'Artists that will be showing work at COLLiDe ATX.',
     'public' => true,
     'menu_position' => 20,
-    'supports' => array( 'title', 'editor', 'custom-fields' )
+    'supports' => array( 'title', 'editor', 'custom-fields' ),
+    'has_archive' => true
   ));
 
   register_post_type( 'event', array(
@@ -72,6 +74,7 @@ function collide_atx_cpt() {
     'description' => 'Events that will be happening at COLLiDe ATX.',
     'public' => true,
     'menu_position' => 20,
-    'supports' => array( 'title', 'editor', 'custom-fields' )
+    'supports' => array( 'title', 'editor', 'custom-fields' ),
+    'has_archive' => true
   ));
 }
