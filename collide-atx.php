@@ -99,4 +99,5 @@ function atx_post_type_queries($query) {
       ),
     ));
   }
+  return $query;
 }
