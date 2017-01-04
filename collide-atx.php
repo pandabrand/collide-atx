@@ -91,13 +91,14 @@ function atx_post_type_queries($query) {
     $today = date('Ymd');
     $query->set('meta_query', array(
       array(
-        'meta_key'=> 'start_date',
-        'compare'=> '<=',
+        'key'=> 'start_date',
         'value'=> $today,
-        'orderby'=> 'meta_value',
-        'order'=> 'ASC',
+        'compare'=> '<=',
       ),
     ));
+    $query->set('orderby', 'meta_value');
+    $query->set('meta_key', 'start_date');
+    $query->set('order', 'DESC');
   }
   return $query;
 }
