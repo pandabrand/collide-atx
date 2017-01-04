@@ -93,7 +93,7 @@ function atx_post_type_queries($query) {
       array(
         'meta_key'=> 'start_date',
         'compare'=> '<=',
-        'value'=> $today
+        'value'=> $today,
         'orderby'=> 'meta_value',
         'order'=> 'DESC',
       )
