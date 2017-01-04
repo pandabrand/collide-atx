@@ -86,9 +86,9 @@ function atx_post_type_queries($query) {
     return $query;
   }
 
-  //Chef post type query modification
+  $today = date('Ymd');
+  //Chef and Artist post type query modification
   if(isset($query->query_vars['post_type']) && ($query->query_vars['post_type'] =='chef' || $query->query_vars['post_type'] =='artist')) {
-    $today = date('Ymd');
     $query->set('meta_query', array(
       array(
         'key'=> 'start_date',
@@ -100,5 +100,12 @@ function atx_post_type_queries($query) {
     $query->set('meta_key', 'start_date');
     $query->set('order', 'DESC');
   }
+
+  if(isset($query->query_vars['post_type']) && $query->query_vars['post_type'] =='event') {
+    $query->set('orderby', 'meta_value');
+    $query->set('meta_key', 'event_date');
+    $query->set('order', 'DESC');
+  }
+
   return $query;
 }
