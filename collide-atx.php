@@ -87,7 +87,7 @@ function atx_post_type_queries($query) {
   }
 
   //Chef post type query modification
-  if(isset($query->query_vars['post_type']) && ($query->query_vars['post_type'] =='chef' || $query->query_vars['post_type'] =='artist') {
+  if(isset($query->query_vars['post_type']) && ($query->query_vars['post_type'] =='chef' || $query->query_vars['post_type'] =='artist')) {
     $today = date('Ymd');
     $query->set('meta_query', array(
       array(
