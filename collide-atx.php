@@ -96,7 +96,7 @@ function atx_post_type_queries($query) {
         'value'=> $today,
         'orderby'=> 'meta_value',
         'order'=> 'DESC',
-      )
-    ))
+      ),
+    ));
   }
 }
