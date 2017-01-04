@@ -89,10 +89,14 @@ function atx_post_type_queries($query) {
   //Chef post type query modification
   if(isset($query->query_vars['post_type']) && $query->query_vars['post_type'] =='chef') {
     $today = date('Ymd');
-    $query->set('meta_key', 'start_date');
-    $query->set('compare', '<=');
-    $query->set('value', $today);
-    $query->set('orderby', 'meta_value');
-    $query->set('order', 'DESC');
+    $query->set('meta_query', array(
+      array(
+        'meta_key'=> 'start_date',
+        'compare'=> '<=',
+        'value'=> $today
+        'orderby'=> 'meta_value',
+        'order'=> 'DESC',
+      )
+    ))
   }
 }
