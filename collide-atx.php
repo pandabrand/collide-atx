@@ -78,3 +78,21 @@ function collide_atx_cpt() {
     'has_archive' => true
   ));
 }
+
+add_action('pre_get_posts', 'atx_post_type_queries');
+function atx_post_type_queries($query) {
+  //No query mods in admin
+  if(is_admin()) {
+    return $query;
+  }
+
+  //Chef post type query modification
+  if(isset($query->query_vars['post_type']) && $query->query_vars['post_type'] =='chef') {
+    $today = date('Ymd');
+    $query->set('meta_key', 'start_date');
+    $query->set('compare', '<=');
+    $query->set('value', $today);
+    $query->set('orderby', 'meta_value');
+    $query->set('order', 'DESC');
+  }
+}
