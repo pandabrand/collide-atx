@@ -54,29 +54,6 @@ function collide_atx_cpt() {
     'supports' => array( 'title', 'editor', 'custom-fields' ),
     'has_archive' => true
   ));
-
-  register_post_type( 'event', array(
-    'labels' => array(
-      'name' => 'Events',
-      'singular_name' => 'Event',
-      'menu_name' => 'Event',
-      'name_admin_bar' => 'Event',
-      'add_new' => 'Add New',
-      'add_new_item' => 'Add New Event',
-      'edit_item' => 'Edit Event',
-      'new_item' => 'New Event',
-      'view_item' => 'View Event',
-      'search_items' => 'Search Events',
-      'not_found' => 'No Events',
-      'not_found_in_trash' => 'No Events in the trash.',
-      'all_items' => 'Events',
-     ),
-    'description' => 'Events that will be happening at COLLiDe ATX.',
-    'public' => true,
-    'menu_position' => 20,
-    'supports' => array( 'title', 'editor', 'custom-fields' ),
-    'has_archive' => true
-  ));
 }
 
 add_action('pre_get_posts', 'atx_post_type_queries');
@@ -100,12 +77,5 @@ function atx_post_type_queries($query) {
     $query->set('meta_key', 'start_date');
     $query->set('order', 'DESC');
   }
-
-  if(isset($query->query_vars['post_type']) && $query->query_vars['post_type'] =='event') {
-    $query->set('orderby', 'meta_value');
-    $query->set('meta_key', 'event_date');
-    $query->set('order', 'DESC');
-  }
-
   return $query;
 }
