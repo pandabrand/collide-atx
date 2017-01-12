@@ -59,7 +59,7 @@ function collide_atx_cpt() {
 add_action('pre_get_posts', 'atx_post_type_queries');
 function atx_post_type_queries($query) {
   //No query mods in admin
-  if(is_admin()) {
+  if(is_admin() || is_single()) {
     return $query;
   }
 
