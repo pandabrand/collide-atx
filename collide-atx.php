@@ -59,7 +59,13 @@ function collide_atx_cpt() {
 add_action('pre_get_posts', 'atx_post_type_queries');
 function atx_post_type_queries($query) {
   //No query mods in admin
-  if(is_admin() || is_single()) {
+  if(is_admin() ||
+    ($query->is_main_query()
+      && $query->is_singular()
+      && ! $query->get( 'post_type' )
+      && ! $query->is_page()
+      && ! $query->is_attachment())
+  ) {
     return $query;
   }
 
