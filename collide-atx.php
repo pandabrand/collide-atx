@@ -85,3 +85,8 @@ function atx_post_type_queries($query) {
   }
   return $query;
 }
+
+function add_google_analytics() {
+  echo "<script>window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;ga('create','UA-52000426-2','auto');ga('send','pageview')</script><script src=\"https://www.google-analytics.com/analytics.js\" async defer></script>";
+}
+add_action('wp_footer', 'add_google_analytics', 10);
